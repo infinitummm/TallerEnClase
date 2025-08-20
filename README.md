@@ -1,79 +1,149 @@
-Estructura de los ejercicio (HASKELL)
+# Taller de Programación: Python (Imperativo) y Haskell (Declarativo)
 
-Cada problema está contenido en un archivo .hs separado, nombrado EjercicioN.hs (donde N es el número del problema). Por ejemplo:
+Este repositorio contiene la solución de 9 problemas en dos paradigmas de programación:
 
-•
-Ejercicio2.hs: Verificación de contraseña
+- **Imperativo (Python)**  
+- **Declarativo (Haskell)**  
 
-•
-Ejercicio3.hs: Calculadora de división
+Cada problema tiene su archivo en Python (`EjercicioX.py`) y en Haskell (`EjercicioX.hs`).
 
-•
-Ejercicio4.hs: Verificador par o impar
+---
 
-•
-Ejercicio5.hs: Comprobador de elegibilidad de impuestos
+## Requisitos previos
 
-•
-Ejercicio6.hs: Asignación grupal
+### Python
+- Instalar **Python 3** desde [python.org](https://www.python.org/).
+- Verificar instalación:
+  ```bash
+  python --version
+Haskell
+Instalar GHC y GHCi desde Haskell Platform.
 
-•
-Ejercicio7.hs: Evaluación de los empleados
-
-•
-Ejercicio8.hs: Precios de Arcade
-
-•
-Ejercicio9.hs: Pedido de pizza
-
-Cada uno de estos archivos contiene:
-
-1.
-La función principal que resuelve el problema específico.
-
-2.
-Una función main que interactúa con el usuario para obtener las entradas necesarias y muestra el resultado de la función del problema.
+Verificar instalación:
 
 
+ghci --version
+Cómo ejecutar los programas
+Python
+Ejecutar cualquier problema con:
 
-Estructura de los problemas (PYTHON)
+python EjercicioX.py
 
-Cada problema está contenido en un archivo .py separado, nombrado EjercicioN.py (donde N es el número del problema). Por ejemplo:
+Haskell
+Abrir GHCi y cargar el archivo:
+ghci EjercicioX.hs
 
-•
-Ejercicio1.py: Verificador de edad legal
 
-•
-Ejercicio2.py: Verificación de contraseña
+ghci problem1.hs
+*Main> verificarEdad 20
+"Eres mayor de edad."
+Lista de Problemas
+ Problema 1: Verificador de edad legal
+Python: Solicita la edad e indica si es mayor de edad.
 
-•
-Ejercicio3.py: Calculadora de división
+Haskell: Función que recibe una edad (Int) y devuelve un String indicando el resultado.
 
-•
-Ejercicio4.py: Verificador par o impar
+Ejemplo:
 
-•
-Ejercicio5.py: Comprobador de elegibilidad de impuestos
 
-•
-Ejercicio6.py: Asignación grupal
+Entrada: 18
+Salida: "Eres mayor de edad."
+ Problema 2: Verificación de contraseña
+Python: Pide una contraseña y la compara con la guardada, ignorando mayúsculas/minúsculas.
 
-•
-Ejercicio7.py: Evaluación de los empleados
+Haskell: Función que recibe dos String y devuelve Bool.
 
-•
-Ejercicio8.py: Precios de Arcade
+Ejemplo:
 
-•
-Ejercicio9.py: Pedido de pizza
 
-Cada uno de estos archivos contiene:
+Entrada: "OpenAI2025"
+Salida: "Las contraseñas coinciden."
+ Problema 3: Calculadora de división
+Python: Solicita dos números y maneja la división por cero con try-except.
 
-1.
-La función principal que resuelve el problema específico.
+Haskell: Función que recibe dos números y devuelve el resultado o un mensaje de error.
 
-2.
-Un bloque if __name__ == "__main__": que permite ejecutar la función directamente cuando el script es llamado.
+Ejemplo:
+
+
+Entrada: 10 0
+Salida: "Error: No se puede dividir entre cero."
+ Problema 4: Verificador par o impar
+Python: Pide un número entero e indica si es par o impar.
+
+Haskell: Función que recibe un Int y devuelve un String.
+
+Ejemplo:
+
+
+Entrada: 7
+Salida: "Es impar."
+ Problema 5: Comprobador de elegibilidad de impuestos
+Python: Solicita edad e ingresos, indica si debe pagar impuestos.
+
+Haskell: Función que recibe edad e ingresos (Int, Float) y devuelve Bool.
+
+Ejemplo:
+
+
+Entrada: edad=30, ingresos=2000
+Salida: "Debe pagar impuestos."
+ Problema 6: Asignación grupal
+Python: Pide nombre y género, asigna grupo según criterios.
+
+Haskell: Función que recibe (String, Char) y devuelve String indicando el grupo.
+
+Ejemplo:
+
+
+Entrada: "Ana", "F"
+Salida: "Grupo A"
+ Problema 7: Evaluación de los empleados
+Python: Según la puntuación, determina nivel y recompensa.
+
+Haskell: Función que recibe un Int y devuelve (String, Float) con nivel y recompensa.
+
+Ejemplo:
+
+
+Entrada: 90
+Salida: "Nivel: Excelente, Recompensa: 1000"
+ Problema 8: Precios de Arcade
+Python: Solicita edad y devuelve precio de entrada según categoría.
+
+Haskell: Función que recibe Int y devuelve Int (precio).
+
+Ejemplo:
+
+
+Entrada: 12
+Salida: "Precio: $5"
+ Problema 9: Pedido de pizza
+Python: Pregunta si quiere pizza vegetariana, muestra menú, permite elegir ingrediente.
+
+Haskell: Función que recibe elección (Bool) y un ingrediente (String), devuelve descripción.
+
+Ejemplo:
+
+
+Entrada: vegetariana=True, ingrediente="Pimiento"
+Salida: "Pizza vegetariana con mozzarella, tomate y pimiento."
+ Notas importantes
+
+
+Se recomienda probar con casos límite:
+
+Edad = 0 o 100.
+
+División con divisor = 0.
+
+Contraseña vacía.
+
+Nombre en mayúsculas/minúsculas.
+
+En Haskell se utiliza map toLower para comparar cadenas sin distinguir mayúsculas/minúsculas.
+
+
 
 
 
